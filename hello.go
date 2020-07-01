@@ -2,9 +2,15 @@ package main
 
 import "fmt"
 
+const englishHelloPrefix = "Hello, "
+
 // Hello : Replies with a greeting when given a name
 func Hello(name string) string {
-    return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	
+    return englishHelloPrefix + name
 }
 
 func main() {
