@@ -1,5 +1,6 @@
 package iteration
 
+import "fmt"
 import "testing"
 
 func TestRepeat(t *testing.T) {
@@ -16,10 +17,18 @@ func TestRepeat(t *testing.T) {
 
 		assertCorrectMessage(t, got, expected)
 	})
+
 }
 
+// Run benchmarks using 'go test -bench="."'
 func BenchmarkRepeat(b *testing.B) {
     for i := 0; i < b.N; i++ {
         Repeat("a")
     }
+}
+
+func ExampleRepeat() {
+	got := Repeat("b")
+	fmt.Println(got)
+    // Output: bbbbb
 }
