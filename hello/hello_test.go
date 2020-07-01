@@ -5,11 +5,11 @@ import "testing"
 func TestHello(t *testing.T) {
 
 	assertCorrectMessage := func(t *testing.T, got, want string) {
-        t.Helper()
+		t.Helper()
 		if got != want {
-				t.Errorf("got %q want %q", got, want)
-			}
+			t.Errorf("got %q want %q", got, want)
 		}
+	}
 	
 	t.Run("saying hello to someone", func(t *testing.T) {
 		got := Hello("Sam", "")
