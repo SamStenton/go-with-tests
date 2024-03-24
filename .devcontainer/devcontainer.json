@@ -1,0 +1,24 @@
+{
+	"name": "Golang",
+	"initializeCommand": "touch ./.devcontainer/.env",
+	"dockerFile": "Dockerfile",
+	"runArgs": [
+		"--env-file", "${localWorkspaceFolder}/.devcontainer/.env"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+			},
+			"extensions": [
+				"golang.go",
+				"roemer.gotaskr-vscode",
+				"ms-azuretools.vscode-docker",
+				"GitHub.vscode-github-actions"
+			]
+		}
+	},
+	"remoteUser": "vscode",
+	"features": {
+		"ghcr.io/devcontainers/features/go:1": {}
+	}
+}
